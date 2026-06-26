@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: "🏠", description: "Overview" },
+  { name: "Autopilot", href: "/dashboard/autopilot", icon: "🤖", description: "Multi-Agent Strategy" },
   { name: "RegulaBot", href: "/dashboard/regulabot", icon: "⚖️", description: "Compliance Monitor" },
   { name: "ContractSense", href: "/dashboard/contractsense", icon: "📄", description: "Contract Analyzer" },
   { name: "GrantRadar", href: "/dashboard/grantradar", icon: "💰", description: "Grant Discovery" },

@@ -3,6 +3,14 @@ import Link from "next/link";
 
 const agents = [
   {
+    name: "Autopilot",
+    icon: "🤖",
+    description: "Your intelligent strategist. Autopilot orchestrates all agents to deliver unified business advice.",
+    href: "/dashboard/autopilot",
+    color: "from-amber-600 to-amber-800",
+    stat: "Multi-agent orchestration",
+  },
+  {
     name: "RegulaBot",
     icon: "⚖️",
     description: "Monitor regulations, detect changes, get action checklists automatically.",
@@ -53,8 +61,8 @@ export default function DashboardPage() {
 
       <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
         <h3 className="text-white font-semibold mb-4">System Status</h3>
-        <div className="grid grid-cols-3 gap-4">
-          {["RegulaBot", "ContractSense", "GrantRadar"].map((agent) => (
+        <div className="grid grid-cols-4 gap-4">
+          {["Autopilot", "RegulaBot", "ContractSense", "GrantRadar"].map((agent) => (
             <div key={agent} className="flex items-center gap-3 bg-gray-800 rounded-xl p-3">
               <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
               <div>
