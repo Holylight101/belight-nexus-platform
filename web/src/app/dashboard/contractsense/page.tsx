@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { API_URL } from "@/lib/api";
+import { ExportButtons } from "@/components/ExportButtons";
 
 export default function ContractSensePage() {
   const [businessName, setBusinessName] = useState("");
@@ -83,6 +84,7 @@ export default function ContractSensePage() {
 
       {result && mode === "full" && (
         <div className="space-y-4">
+          <ExportButtons data={result} filename="ContractSense-Report" />
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-white font-semibold text-lg">{result.contract_type || "Contract Analysis"}</h2>

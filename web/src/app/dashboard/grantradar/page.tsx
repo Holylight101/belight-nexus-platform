@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { API_URL } from "@/lib/api";
+import { ExportButtons } from "@/components/ExportButtons";
 
 export default function GrantRadarPage() {
   const [orgName, setOrgName] = useState("");
@@ -101,6 +102,7 @@ export default function GrantRadarPage() {
 
       {result && (
         <div className="space-y-4 mb-10">
+          <ExportButtons data={result} filename="GrantRadar-Report" />
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-white font-semibold text-lg">Organization Assessment</h2>
