@@ -194,6 +194,10 @@ async def synthesize(user_message: str, agent_results: List[Dict]) -> Dict:
             content = content.split("```")[1]
             if content.startswith("json"):
                 content = content[4:]
+            content = content.strip()
+            # Remove trailing ``` if present
+            if content.endswith("```"):
+                content = content[:-3].strip()
         content = content.strip()
         return json.loads(content)
     except Exception as e:
